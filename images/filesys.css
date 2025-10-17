@@ -1,0 +1,27 @@
+p {
+    font-family:monospace;
+    text-align: left;
+    font-size:large;
+    padding-left: 1%;
+    color: rgb(31, 31, 31);
+    font-size: 125%;
+}
+h1 {
+    font-family:monospace;
+    text-align: left;
+    font-size:large;
+    padding-left: 1%;
+    padding-top: 1%;
+    color: rgb(31, 31, 31);
+    font-size: 150%;
+}
+img {
+    float: left;
+    width: 17px;
+    height: 17px;
+    padding-right: 0,5%;
+    padding-left: 2%;
+}
+a {
+  text-decoration: none;
+}

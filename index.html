@@ -1,17 +1,52 @@
 <html lang="en">
   <head>
-    <title>onionjumoke ☀</title>
+    <title>onionjumoke</title>
     <link rel="stylesheet" href="./styles.css">
     <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--i'm separating the <script>s from the rest of the code because if i don't i'll get confused-->
     <script>
   function myFunction() {
      var element = document.body;
      element.classList.toggle("dark-mode");
   }
 </script> <!--thank you w3schools-->
+
+<script>
+        function getIOSVersion() {
+            var userAgent = navigator.userAgent;
+            
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                var match = userAgent.match(/OS (\d+)_(\d+)_?(\d+)?/);
+                
+                if (match && match.length > 1) {
+                    return [match[1], match[2], match[3] || '0'].join('.');
+                }
+            }
+            return null;
+        }
+
+        function redirectBasedOnIOSVersion() {
+            var version = getIOSVersion();
+            if (version) {
+                var versionParts = version.split('.').map(Number);
+                var majorVersion = versionParts[0];
+
+                if (majorVersion <= 6) {
+                    window.location.replace("./legacy/index.html");
+                } else if (majorVersion >= 7) {
+                    window.location.replace("./index.html");
+                } else {
+                    window.location.replace("./index.html");
+                }
+            } else {
+            }
+        }
+        
+        redirectBasedOnIOSVersion();
+</script> <!--thanks to my personal computer friend qwen bit 2.5 for the script #GodBlessLLMs-->
   </head>
   <body>
     <h1 style="padding-top: 2.5%;">hello, world</h1>
