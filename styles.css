@@ -65,6 +65,7 @@ p {
     font-family:monospace;
     font-size: large;
     color:rgb(221, 221, 221);
+    fill: white;
     text-align:center;
     animation: atStart2 1.5s ease-in-out;
     transition:transform 0.3s ease;
@@ -149,7 +150,15 @@ svg {
     width: 25px;
     height: 25px;
     color: rgb(255, 255, 255);
+    fill: white;
     animation: atStartText 1s ease-in-out;
+}
+.container svg {
+    color: rgb(255, 255, 255);
+    animation: atStartText 1s ease-in-out;
+    padding-left: 10px;
+    width: 50px;
+    height: 50px;
 }
 @keyframes atStart {
   0% {
