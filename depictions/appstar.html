@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <title>oj - depictions</title>
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--i'm separating the <script>s from the rest of the code because if i don't i'll get confused-->
+    <script>
+  function myFunction() {
+     var element = document.body;
+     element.classList.toggle("dark-mode");
+  }
+</script> <!--thank you w3schools-->
+
+<script>
+        function getIOSVersion() {
+            var userAgent = navigator.userAgent;
+            
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                var match = userAgent.match(/OS (\d+)_(\d+)_?(\d+)?/);
+                
+                if (match && match.length > 1) {
+                    return [match[1], match[2], match[3] || '0'].join('.');
+                }
+            }
+            return null;
+        }
+
+        function redirectBasedOnIOSVersion() {
+            var version = getIOSVersion();
+            if (version) {
+                var versionParts = version.split('.').map(Number);
+                var majorVersion = versionParts[0];
+
+                if (majorVersion <= 6) {
+                    window.location.replace("../legacy/index.html");
+                } else if (majorVersion >= 7) {
+                } else {
+                    window.location.replace("../index.html");
+                }
+            } else {
+            }
+        }
+        
+        redirectBasedOnIOSVersion();
+</script> <!--thanks to my personal computer friend qwen bit 2.5 for the script #GodBlessLocalLLMs-->
+
+  </head>
+  <body>
+    <button class="socialbutton" style="bottom:45px;z-index:9999;" onclick="myFunction()">
+      <h2>☾</h2>
+    </button>
+    <div class="container-depiction">
+      <img src="../images/appstaruncut.png">
+      <p style="font-size: 150%;">appstar</p>
+    </div>
+    <p style="font-size: smaller;">⠀</p>
+    <div class="container-depiction" style="height: 100px;">
+      <p>Not much can be said about appstar, it's a web front for Install0us 2.5 that lets you download IPAs, that's it.</p>
+    </div>
+    <div class="container-depiction" style="height:125px;">
+      <p>It was originally made as a school project, currently gets some support. Install0us can be obtainable trough http://repo.onionjumoke.my.to or http://yzu.moe/dev/</p>
+    </div>
+    <p style="font-size: smaller;">⠀</p>
+    <a href="http://app.star.is">
+      <div class="container" style="height: 50px;">
+        <svg xmlns="http://www.w3.org/2000/svg" style="width:25px;height:25px;" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 500 511.61"><path fill-rule="nonzero" d="m265.96 363.22 15.5-101.27c-45.53 4.53-96.07 15.77-138.72 45.89-47.72 33.69-86.32 91.71-98.25 191.8-.87 7.43-7.62 12.75-15.06 11.87-5.73-.68-10.21-4.86-11.55-10.14C7 468.76 1.42 437.95.25 409.03c-3.27-79.4 26.39-144.22 70.18-193.61 43.36-48.92 100.66-82.64 153.32-100.33 20.18-6.8 39.79-11.27 57.77-13.36L266.08 15.9c-1.32-7.34 3.57-14.38 10.91-15.69 4.07-.72 8.04.46 11 2.9l207.1 171.3c5.76 4.77 6.57 13.33 1.8 19.08l-1.54 1.59-207.06 180.39c-5.64 4.92-14.22 4.32-19.14-1.32a13.529 13.529 0 0 1-3.19-10.93z"/></svg>
+        <p>visit now</p>
+      </div>
+    </a>
+    <a href="../index.html">
+      <div class="container" style="height: 50px;">
+        <svg version="1.1" id="Layer_1" style="width:25px;height:25px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.88px" height="122.433px" viewBox="0 0 122.88 122.433" enable-background="new 0 0 122.88 122.433" xml:space="preserve"><g><polygon fill-rule="evenodd" clip-rule="evenodd" points="0,61.217 63.673,122.433 63.673,83.029 122.88,83.029 122.88,39.399 63.673,39.399 63.673,0 0,61.217"/></g></svg>
+        <p>go back</p>
+      </div>
+    </a>
+    <p id="demo" style="color: rgb(73, 73, 73); font-size: smaller; position:fixed; bottom: 0%;text-align:left;padding:0%;"></p>
+    <script>
+      let agent = navigator.userAgent;
+      document.getElementById("demo").innerHTML = "User:<br>" + agent;
+    </script>
+  </body>
+</html>

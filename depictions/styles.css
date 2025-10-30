@@ -24,7 +24,7 @@ h1 {
 }
 p {
     font-family:monospace;
-    text-align: left;
+    text-align: center;
     font-size:large;
     padding-left: 5%;
     padding-right: 5%;
@@ -97,7 +97,7 @@ p {
     height:100px;
   }
 .container-depiction:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 .dark-mode .container {
     display: flex;

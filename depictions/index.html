@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <title>oj - depictions</title>
+    <link rel="stylesheet" href="./index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--i'm separating the <script>s from the rest of the code because if i don't i'll get confused-->
+    <script>
+  function myFunction() {
+     var element = document.body;
+     element.classList.toggle("dark-mode");
+  }
+</script> <!--thank you w3schools-->
+
+<script>
+        function getIOSVersion() {
+            var userAgent = navigator.userAgent;
+            
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                var match = userAgent.match(/OS (\d+)_(\d+)_?(\d+)?/);
+                
+                if (match && match.length > 1) {
+                    return [match[1], match[2], match[3] || '0'].join('.');
+                }
+            }
+            return null;
+        }
+
+        function redirectBasedOnIOSVersion() {
+            var version = getIOSVersion();
+            if (version) {
+                var versionParts = version.split('.').map(Number);
+                var majorVersion = versionParts[0];
+
+                if (majorVersion <= 6) {
+                    window.location.replace("../legacy/index.html");
+                } else if (majorVersion >= 7) {
+                } else {
+                    window.location.replace("../index.html");
+                }
+            } else {
+            }
+        }
+        
+        redirectBasedOnIOSVersion();
+</script> <!--thanks to my personal computer friend qwen bit 2.5 for the script #GodBlessLocalLLMs-->
+
+  </head>
+  <body>
+    <h1 style="padding-top: 2.5%;font-size: 350%;">depictions</h1>
+      <button class="socialbutton" style="bottom:30px;z-index:9999;" onclick="myFunction()">
+        <h2>☾</h2>
+      </button>
+    <a href="https://x.com/onionjumokee/">
+      <button class="socialbutton">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" fillRule="evenodd"><path d="M818 800 498.11 333.745l.546.437L787.084 0h-96.385L455.738 272 269.15 0H16.367l298.648 435.31-.036-.037L0 800h96.385l261.222-302.618L565.217 800zM230.96 72.727l448.827 654.546h-76.38L154.217 72.727z" transform="translate(103 112)"/></svg>
+      </button>
+    </a>
+    <p>i don't know how you got here but this is the <strong>depictions</strong> folder, where all the depictions are stored</p> 
+    <a href="./appstar.html"99>
+      <div class="container">
+        <img src="../images/appstaruncut.png">
+        <p>appstar</p>
+      </div>
+    <p id="demo" style="color: rgb(73, 73, 73); font-size: smaller; position:fixed; bottom: 0%;"></p>
+    <script>
+      let agent = navigator.userAgent;
+      document.getElementById("demo").innerHTML = "User:<br>" + agent;
+    </script>
+  </body>
+</html>
