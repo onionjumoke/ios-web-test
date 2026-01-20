@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=320, initial-scale=1 user-scalable=no">
-    <title>ISO26</title>
+    <title>iso 26</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -28,6 +28,60 @@
     -webkit-box-align: center;
     -webkit-box-pack: center;
     z-index: 9999;
+}
+.nv-btn {
+    position: absolute;
+    top: 0;
+    margin-top: 4px;
+    margin-left:4px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    color: rgb(27, 27, 27);
+    float: left;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    border: #b6b6b6 1px solid;
+    left:0%;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+}
+.nv-btn:hover {
+    -webkit-transform: scale(1.1);
+}
+.nv-btn:active {
+    -webkit-transform: scale(1.2);
+}
+#nv-btn-right {
+    right: 0%;
+    position: absolute;
+    top: 0;
+    margin-top: 4px;
+    margin-right:4px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    color: rgb(38, 41, 43);
+    float: left;
+    background-color: rgba(44, 178, 255, 0.85);
+    border-radius: 50%;
+    border: #008be7 1px solid;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+}
+#nv-btn-right:hover {
+    -webkit-transform: scale(1.1);
+}
+#nv-btn-right:active {
+    -webkit-transform: scale(1.2);
 }
 .botbar {
     position: fixed;
@@ -54,33 +108,77 @@
     text-indent: 15px;
 
     z-index: 9999;
+    transition: all 0.3s ease;
 }
 .botbar img {
     width:15px;
     height: 15px;
     margin-right:10px;
 }
-
+.icn {
+    width:60px;
+    height: 60px;
+    border-radius: 12px;
+    margin-left: -2px;
+}
 .p2 {
     font-size: 20px;
     line-height: 30px;
     font-weight: bold;
 }
+.subt {
+    color:rgb(92, 92, 92);
+}
 body {
     margin-top:44px;
+    background-color: #eaeaea;
 }
-    </style>
+</style>
 </head>
 <body class="pinstripe">
-<div class="navbar">Test</div>
+<div class="navbar">
+    <div class="nv-btn">
+        <img src="./left-arrow.svg" alt="<" style="width:22px;height:20px;margin-right: 4px;margin-top:4px">
+    </div>
+    Test
+    <div id="nv-btn-right">
+        <img src="./checkmark.svg" alt="v" style="width:26px;height:26px;margin-top:4px">
+    </div>
+</div>
 <panel>
     <fieldset>
         <div>
             <div>
-                <p class="p2">test</p>
-                <p>this is a test.</p>
+                <img src="./wifi.jpeg" class="icn">
+                <p class="p2">Test</p>
+                <p class="subt">this is a test. what am i testing? who knows!</p>
             </div>
         </div>
+    </fieldset>
+    <fieldset>
+        <a href="#">
+            <div>
+                <div>
+                    <label>Test</label>
+                </div>
+            </div>
+        </a>
+    </fieldset>
+    <fieldset>
+        <a href="#">
+            <div>
+                <div>
+                    <label>Test</label>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <div>
+                    <label>Test</label>
+                </div>
+            </div>
+        </a>
     </fieldset>
     <label>Lorem</label>
     <fieldset>
